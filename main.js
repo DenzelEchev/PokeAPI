@@ -1,7 +1,7 @@
 const apiData = {
     URL: 'https://pokeapi.co/api/v2/',
     type: 'pokemon',
-    id: '22',
+    id: '245', //make it so that you can type in a number and get back the data that way
 }
 
 const {URL, type, id} = apiData
@@ -15,7 +15,7 @@ fetch(apiUrl)
         console.log(data)
         const html = `
         <div class="Pokemon">${data.name}</div>
-        <img src=${data.sprites.front_shiny}>
+        <img src=${data.sprites.front_default}>
         <div class="details">
         <span>Height:${data.height}</span>
         <span>Weight:${data.weight}</span>
