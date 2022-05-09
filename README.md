@@ -7,6 +7,7 @@ Things to do:
 -add css and make it look more pretty
 
 JS Things for functionality:
--Add ID search function(name as well and work on spelling of names)
+-Add ID search function
+-Add function for name as well in case of name given instead of number
 -When done with above feature add an auto complete function
 -
