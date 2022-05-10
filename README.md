@@ -7,7 +7,7 @@ Things to do:
 -add css and make it look more pretty
 
 JS Things for functionality:
--Add ID search function
--Add function for name as well in case of name given instead of number
+-Add ID search function(done and bug checked)
+-Add function for name as well in case of name given instead of number(WIP)
 -When done with above feature add an auto complete function
 -
