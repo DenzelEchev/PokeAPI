@@ -1,0 +1,186 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.pokeContainer{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    
+}
+
+.pokeFetch{
+    width: 100%;
+    height: 100%;
+    border: solid 10px;
+    border-radius: 5%;
+    display: flex;
+    
+}
+
+.imgcard{
+    display: flex;
+    width: 450px;
+    height: 500px;
+    border: 10px solid;
+    border-radius: 60px 15px;
+    margin: 1.5% 1% 0 1.5%;
+    justify-content: center;
+    background-color: white;
+}
+
+img{
+    height: 400px;
+    width: 350px;
+
+}
+
+.details{
+    width: 45%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.8%;
+}
+
+.stats, .pokeName{
+    width: 80%;
+    height: 50px;
+    border: 10px solid;
+    background-color: white;
+    border-radius: 60px 15px;
+    text-align: center;
+    padding-top: 5px;
+   
+}
+
+/******************************************
+/* TYPE STYLES
+/*******************************************/
+
+.bug{
+    background-color: #92e065;
+    border-color: #518534;
+}
+
+.dark{
+    background-color: #12024d;
+    border-color: #090126;
+}
+
+.dragon{
+    background-color: #6b53c2;
+    border-color: #2a1b61;
+}
+
+.electric{
+    background-color: #edd55a;
+    border-color: #918130;
+}
+
+.fairy{
+    background-color: #f0a8f0;
+    border-color: #b061b0;
+}
+
+.fighting{
+    background-color: #a34e21;
+    border-color: #632c0e;
+}
+
+.fire{
+    background-color: #ed4f0c;
+    border-color: #8c2c03;
+}
+
+.flying{
+    background-color: #277ec4;
+    border-color: #0c4778;
+}
+
+.ghost{
+    background-color: #421b7d;
+    border-color: #2b1054;
+}
+
+.grass{
+    background-color: #3aba4b;
+    border-color: #208c2f;
+}
+
+.ground{
+    background-color: #cbb061;
+    border-color: #8a7436;
+}
+
+.ice{
+    background-color: #86cff1;
+    border-color: #4d86a1;
+}
+
+.normal{
+    background-color: #c5beae;
+    border-color: #615d54;
+}
+
+.poison{
+    background-color: #86498d;
+    border-color: #4d2652;
+}
+
+.psychic{
+    background-color: #db5582;
+    border-color: #7a3049;
+}
+
+.rock{
+    background-color: #b29f60;
+    border-color: #807244;
+}
+
+.steel{
+    background-color: #b6b6c1;
+    border-color: #7c7c82;
+}
+
+.water{
+    background-color: #5092e9;
+    border-color: #325d96;
+}
+
+.stats, .pokeName ,.imgcard{
+    background-color: white;
+
+}
