@@ -28,15 +28,18 @@ const generatePokemon = (data) => {
     <div class="pokeFetch ${findTypeForClass(data)}">
         <div class="imgcard ${findTypeForClass(data)}">
         <img src="${data.sprites.other["official-artwork"].front_default}">
+        <div class="typeSec">
+        ${data.types.map(type => `
+            <span class="${type.type.name}">${type.type.name}</span>
+        `)}
+        </div>
         </div>
         <section class="details">
         <div class="pokeName ${findTypeForClass(data)}">#${data.id}&nbsp| ${data.name[0].toUpperCase() + data.name.substring(1)}</div>
         <div class="stats ${findTypeForClass(data)}">
         <span>Height:${data.height/10}m &nbsp| Weight:${data.weight/10}kg</span>
         </div>
-        ${data.types.map(type => `
-            <span class="${type.type.name}">${type.type.name}</span>
-        `)}
+
         </section>
     </div>
     `
