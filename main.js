@@ -27,7 +27,7 @@ const generatePokemon = (data) => {
     const html = `
     <div class="pokeFetch ${findTypeForClass(data)}">
         <div class="imgcard ${findTypeForClass(data)}">
-        <img src="${data.sprites.other["official-artwork"].front_default}">
+        <img class="pokeImg"src="${data.sprites.other["official-artwork"].front_default}">
         <div class="typeSec">
         ${data.types.map(type => `
             <span class="${type.type.name}">${type.type.name}</span>
@@ -39,12 +39,17 @@ const generatePokemon = (data) => {
         <div class="stats ${findTypeForClass(data)}">
         <span>Height:${data.height/10}m &nbsp| Weight:${data.weight/10}kg</span>
         </div>
+        <div class="buttonSect">
+        <button id="pokeButton">Previous<img src="${data.sprites.front_default}"> </button>
+        <button id="pokeButton">Next <img src="${data.sprites.front_default}"></button>
+        </div>
 
         </section>
     </div>
     `
     const pokemonDiv = document.querySelector('.pokeContainer')
     pokemonDiv.innerHTML = html
+    
 
 
 }
