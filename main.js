@@ -4,12 +4,12 @@ document.querySelector('#button').addEventListener('click', () => {
     fetchPokemon(inputValue)
 })
 
-function fetchPokemon(pokemonId){
+async function fetchPokemon(pokemonId){
     
     if(pokemonId == parseInt(pokemonId) && parseInt(pokemonId) < 898 && parseInt(pokemonId) !== 0){
-    fetch(`${endpoint}/${pokemonId}`)
-    .then((response) => response.json())
-    .then((pokeData) => (generatePokemon(pokeData)))
+    const res = await fetch(`${endpoint}/${pokemonId}`)
+    const pokeData = await res.json()
+    return generatePokemon(pokeData)
     } else {
         console.log('error')
     }
