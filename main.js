@@ -13,16 +13,16 @@ function fetchPokemon(pokemonId){
     } else {
         console.log('error')
     }
-    } 
+} 
 
-    function findTypeForClass(pokemon){
+function findTypeForClass(pokemon){
         if(pokemon.types.length > 0){
             return pokemon.types[0].type.name
         }else{
             return ""
         }
-    }
-
+}
+// add in a "Next" and "Previous" Pokémon varible to add date to the corresponding buttons
 const generatePokemon = (data) => {
     const html = `
     <div class="pokeFetch ${findTypeForClass(data)}">
