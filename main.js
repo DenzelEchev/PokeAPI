@@ -1,19 +1,27 @@
-const endpoint = 'https://pokeapi.co/api/v2/pokemon'
+const pokeUrl = 'https://pokeapi.co/api/v2/pokemon'
+const flavorTextUrl = 'https://pokeapi.co/api/v2/pokemon-species'
 document.querySelector('#button').addEventListener('click', () => {
-    const inputValue = document.querySelector('#pokeNum').value
+    const inputValue = document.querySelector('#pokeId').value
     fetchPokemon(inputValue)
+    fetchFlavorText(inputValue)
 })
 
 async function fetchPokemon(pokemonId){
     
     if(pokemonId == parseInt(pokemonId) && parseInt(pokemonId) < 898 && parseInt(pokemonId) !== 0){
-    const res = await fetch(`${endpoint}/${pokemonId}`)
+    const res = await fetch(`${pokeUrl}/${pokemonId}`)
     const pokeData = await res.json()
     return generatePokemon(pokeData)
     } else {
         console.log('error')
     }
 } 
+
+async function fetchFlavorText(pokemonId) {
+    const res = await fetch(`${flavorTextUrl}/${pokemonId}`)
+    const flavorData = await res.json()
+    return generateFlavorText(flavorData)
+}
 
 function findTypeForClass(pokemon){
         if(pokemon.types.length > 0){
@@ -50,9 +58,9 @@ const generatePokemon = (data) => {
     const pokemonDiv = document.querySelector('.pokeContainer')
     pokemonDiv.innerHTML = html
     
-
-
 }
 
-
+const generateFlavorText = (data) => {
+    console.log(data.flavor_text_entries[0])
+}
 
