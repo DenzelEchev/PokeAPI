@@ -46,11 +46,7 @@ const generatePokemon = (data) => {
         <div class="pokeName ${findTypeForClass(data)}">#${data.id}&nbsp| ${data.name[0].toUpperCase() + data.name.substring(1)}</div>
         <div class="stats ${findTypeForClass(data)}">
         <span>Height:${data.height/10}m &nbsp| Weight:${data.weight/10}kg</span>
-        </div>
-        <div class="buttonSect">
-        <button id="pokeButton">Previous<img src="${data.sprites.front_default}"> </button>
-        <button id="pokeButton">Next <img src="${data.sprites.front_default}"></button>
-        </div>
+        
     
 
         </section>
