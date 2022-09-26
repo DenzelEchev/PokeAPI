@@ -51,6 +51,7 @@ const generatePokemon = (data) => {
         <button id="pokeButton">Previous<img src="${data.sprites.front_default}"> </button>
         <button id="pokeButton">Next <img src="${data.sprites.front_default}"></button>
         </div>
+    
 
         </section>
     </div>
@@ -66,7 +67,7 @@ const generateFlavorText = (data) => {
         <div>${data.flavor_text_entries[0].flavor_text}</div>
     }`
 
-    const flavorTextDiv = document.querySelector('.flavorContainer')
+    const flavorTextDiv = document.querySelector('.pokeFlavor')
     flavorTextDiv.innerHTML = flavorText
 }
 
