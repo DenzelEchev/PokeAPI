@@ -30,38 +30,36 @@ function findTypeForClass(pokemon){
             return ""
         }
 }
-// add in a "Next" and "Previous" Pokémon varible to add date to the corresponding buttons
+
 const generatePokemon = (data) => {
     const html = `
-    <div class="pokeFetch ${findTypeForClass(data)}">
-        <div class="imgcard ${findTypeForClass(data)}">
-        <img class="pokeImg"src="${data.sprites.other["official-artwork"].front_default}">
-        <div class="typeSec">
-        ${data.types.map(type => `
-            <span class="${type.type.name}">${type.type.name}</span>
-        `)}
-        </div>
-        </div>
-        <section class="details">
-        <div class="pokeName ${findTypeForClass(data)}">#${data.id}&nbsp| ${data.name[0].toUpperCase() + data.name.substring(1)}</div>
-        <div class="stats ${findTypeForClass(data)}">
-        <span>Height:${data.height/10}m &nbsp| Weight:${data.weight/10}kg</span>
-        
-    
+        <img src="${data.sprites.other["official-artwork"].front_default}" alt="${data.name} Image" />
 
-        </section>
-    </div>
+        <div class="pokeName">
+            <div>${data.name[0].toUpperCase() + data.name.substring(1)}</div>
+            <div>${data.id}</div>
+        </div>
+
+        <div class="pokeType">${data.types.map(type => `
+            <span class="${type.type.name}">${type.type.name}</span>
+        `).join(" ")}</div>
+
+        <div class="pokeStats">
+            <div>Height:${data.height/10}m</div>
+            <div>Weight:${data.weight/10}kg</div>
+        </div>
     `
-    const pokemonDiv = document.querySelector('.pokeContainer')
-    pokemonDiv.innerHTML = html
+    const pokeRender = document.querySelector('.pokeRender')
+    pokeRender.innerHTML = html
     
 }
 
+
 const generateFlavorText = (data) => {
-    console.log(data.flavor_text_entries[0])
-    const flavorText = `{
+   
+    const flavorText = `
         <div>${data.flavor_text_entries[0].flavor_text}</div>
-    }`
+    `
 
     const flavorTextDiv = document.querySelector('.pokeFlavor')
     flavorTextDiv.innerHTML = flavorText
