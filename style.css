@@ -44,15 +44,27 @@ align-items: center;
     justify-content: center;
 }
 
+.renderBox {
+    display: flex;
+    flex-direction: column;
+}
+
 img {
-width: 40%;
-height: 40%;
+width: 60%;
+height: 60%;
+align-self: center;
+background-color: white;
+border-radius: 70px;
+margin: 10px 0px;
 }
 
 .pokeName, .pokeType, .pokeStats {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 /******************************************
@@ -147,9 +159,4 @@ height: 40%;
 .water{
     background-color: #5092e9;
     border-color: #325d96;
-}
-
-.stats, .pokeName ,.imgcard{
-    background-color: white;
-
 }

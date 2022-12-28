@@ -33,6 +33,7 @@ function findTypeForClass(pokemon){
 
 const generatePokemon = (data) => {
     const html = `
+    <div class="renderBox ${findTypeForClass(data)}">
         <img src="${data.sprites.other["official-artwork"].front_default}" alt="${data.name} Image" />
 
         <div class="pokeName">
@@ -48,6 +49,7 @@ const generatePokemon = (data) => {
             <div>Height:${data.height/10}m</div>
             <div>Weight:${data.weight/10}kg</div>
         </div>
+    </div>
     `
     const pokeRender = document.querySelector('.pokeRender')
     pokeRender.innerHTML = html
