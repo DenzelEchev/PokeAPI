@@ -59,9 +59,9 @@ const generatePokemon = (data) => {
 
 const generateFlavorText = (data) => {
     console.log(data.flavor_text_entries[0])
-    const flavorText = `{
+    const flavorText = `
         <div>${data.flavor_text_entries[0].flavor_text}</div>
-    }`
+    `
 
     const flavorTextDiv = document.querySelector('.pokeFlavor')
     flavorTextDiv.innerHTML = flavorText
