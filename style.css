@@ -26,13 +26,42 @@
 
 body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(139, 140, 141);
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
+.pokeForm{
+    margin-top: 4rem;
+    width: 30rem;
+    height: 3rem;
+    border: 3px solid black;
+    border-radius: 30px;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    border: none;
+    width: 75%;
+    font-size: 2rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+border: none;
+background-color: white;
+font-size: 2rem;
+}
+
 .pokeRender {
 display: flex;
 flex-direction: column;

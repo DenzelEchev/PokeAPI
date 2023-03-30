@@ -1,6 +1,6 @@
 const pokeUrl = 'https://pokeapi.co/api/v2/pokemon'
 const flavorTextUrl = 'https://pokeapi.co/api/v2/pokemon-species'
-document.querySelector('#button').addEventListener('click', () => {
+document.querySelector('button').addEventListener('click', () => {
     const inputValue = document.querySelector('#pokeId').value
     fetchPokemon(inputValue)
     fetchFlavorText(inputValue)
