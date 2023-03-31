@@ -32,38 +32,23 @@ function findTypeForClass(pokemon){
 }
 
 const generatePokemon = (data) => {
-    const html = `
-    <div class="renderBox ${findTypeForClass(data)}">
-        <img src="${data.sprites.other["official-artwork"].front_default}" alt="${data.name} Image" />
-
-        <div class="pokeName">
-            <div>${data.name[0].toUpperCase() + data.name.substring(1)}</div>
-            <div>${data.id}</div>
-        </div>
-
-        <div class="pokeType">${data.types.map(type => `
+    const imgRenderHolder = document.querySelector('.pokeImg')
+    const imgRender = `
+    <div class="${findTypeForClass(data)} imgHolder">
+        <img src="${data.sprites.other["official-artwork"].front_default}">
+        <div class="typeSec">
+        ${data.types.map(type => `
             <span class="${type.type.name}">${type.type.name}</span>
-        `).join(" ")}</div>
-
-        <div class="pokeStats">
-            <div>Height:${data.height/10}m</div>
-            <div>Weight:${data.weight/10}kg</div>
+        `)}
         </div>
     </div>
     `
-    const pokeRender = document.querySelector('.pokeRender')
-    pokeRender.innerHTML = html
     
+    imgRenderHolder.innerHTML = imgRender
 }
-
 
 const generateFlavorText = (data) => {
    
-    const flavorText = `
-        <div>${data.flavor_text_entries[0].flavor_text}</div>
-    `
 
-    const flavorTextDiv = document.querySelector('.pokeFlavor')
-    flavorTextDiv.innerHTML = flavorText
 }
 

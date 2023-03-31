@@ -11,28 +11,31 @@
     <link rel="stylesheet" href="style.css">
     <title>PokeAPI</title>
 </head>
-
-<!-- <body>
-    <nav>
-        <input id="pokeId" type="text">
-        <button id="button">PokéSearch</button>
-    </nav>
-
-    <div class="pokeRender"></div>
-
-    <div class="pokeFlavor"></div>
-
-    <footer></footer>
-
-    <script src="main.js"></script>
-    
-</body>-->
-
 <body>
-    <section class="pokeForm">
-            <input type="search" id="pokeId" placeholder="PokéSearch">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+
+    <section class="form-holder">
+        <section class="pokeForm">
+                <input type="search" id="pokeId" placeholder="PokéSearch">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </section>
     </section>
+
+    <section id="pokeRender">
+        <div class="pokeImg">
+            <!-- render -->
+        </div>
+
+        <div class="pokeDetails">
+            <div class="pokeStats">
+                <!-- render -->
+            </div>
+
+            <div class="pokeFlavor">
+                <!-- render -->
+            </div>
+        </div>
+    </section>
+
     <script src="main.js"></script>
 </body>
 
