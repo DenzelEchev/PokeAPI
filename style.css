@@ -87,6 +87,15 @@ button{
 .pokeFlavor{
     display: flex;
     justify-content: center;
+    background: white;
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.filler{
+    background: white;
+    width: 100%;
+    height: 4rem;
 }
 
 .renderBox {
@@ -114,18 +123,32 @@ img {
 }
 
 span{
+    display: flex;
+    justify-content: center;
     font-size: 1.4rem;
-    color: white;
+    background: white;
     padding: 3px;
 }
 
-.pokeName, .pokeType, .pokeStats {
+.pokeType{
     display: flex;
     justify-content: space-around;
     border: 1px solid black;
     border-radius: 5px;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+.pokeStats{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.pokeName{
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0;
 }
 
 /******************************************

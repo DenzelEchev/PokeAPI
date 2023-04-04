@@ -8,7 +8,7 @@ document.querySelector('button').addEventListener('click', () => {
 
 async function fetchPokemon(pokemonId){
     
-    if(pokemonId == parseInt(pokemonId) && parseInt(pokemonId) < 898 && parseInt(pokemonId) !== 0){
+    if(pokemonId == parseInt(pokemonId) && parseInt(pokemonId) <= 1010 && parseInt(pokemonId) !== 0){
     const res = await fetch(`${pokeUrl}/${pokemonId}`)
     const pokeData = await res.json()
     return generatePokemon(pokeData)
@@ -33,6 +33,7 @@ function findTypeForClass(pokemon){
 
 const generatePokemon = (data) => {
     const imgRenderHolder = document.querySelector('.pokeImg')
+    const statsRenderHolder = document.querySelector('.pokeStats')
     const imgRender = `
     <div class="${findTypeForClass(data)} imgHolder">
         <img src="${data.sprites.other["official-artwork"].front_default}">
@@ -43,12 +44,21 @@ const generatePokemon = (data) => {
         </div>
     </div>
     `
-    
+    const statsRender = `
+    <div class="pokeName ${findTypeForClass(data)}">#${data.id}&nbsp| ${data.name[0].toUpperCase() + data.name.substring(1)}</div>
+    <span>Height:${data.height/10}m &nbsp| Weight:${data.weight/10}kg</span>
+    `
+
     imgRenderHolder.innerHTML = imgRender
+    statsRenderHolder.innerHTML = statsRender
 }
 
 const generateFlavorText = (data) => {
-   
-
+    const flavorRender = document.querySelector('.pokeFlavorText')
+    const flavorText = `
+        <div class="pokeFlavor">${data.flavor_text_entries[0].flavor_text}</div>
+        <div class="filler"></div>
+    `
+    flavorRender.innerHTML = flavorText
 }
 
