@@ -1,4 +1,4 @@
-# Pokemon API project
+# Pokemon API project Version 2.00.00
 This repo serves as a practice ground for my APIs and other JS techniques that I will need in the very near future.
 
 ### Things to do:
@@ -21,3 +21,4 @@ This repo serves as a practice ground for my APIs and other JS techniques that I
 ### Things for later:
 [] add Sass
 [] try it out on a framework
+[x] 2.0 Major Revamp
