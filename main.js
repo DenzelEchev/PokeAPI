@@ -54,11 +54,13 @@ const generatePokemon = (data) => {
 }
 
 const generateFlavorText = (data) => {
+
     const flavorRender = document.querySelector('.pokeFlavorText')
     const flavorText = `
         <div class="pokeFlavor">${data.flavor_text_entries[0].flavor_text}</div>
         <div class="filler"></div>
     `
     flavorRender.innerHTML = flavorText
+
 }
 
