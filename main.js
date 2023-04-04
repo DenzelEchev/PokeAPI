@@ -1,6 +1,6 @@
 const pokeUrl = 'https://pokeapi.co/api/v2/pokemon'
 const flavorTextUrl = 'https://pokeapi.co/api/v2/pokemon-species'
-document.querySelector('#button').addEventListener('click', () => {
+document.querySelector('button').addEventListener('click', () => {
     const inputValue = document.querySelector('#pokeId').value
     fetchPokemon(inputValue)
     fetchFlavorText(inputValue)
@@ -8,7 +8,7 @@ document.querySelector('#button').addEventListener('click', () => {
 
 async function fetchPokemon(pokemonId){
     
-    if(pokemonId == parseInt(pokemonId) && parseInt(pokemonId) < 898 && parseInt(pokemonId) !== 0){
+    if(pokemonId == parseInt(pokemonId) && parseInt(pokemonId) <= 1010 && parseInt(pokemonId) !== 0){
     const res = await fetch(`${pokeUrl}/${pokemonId}`)
     const pokeData = await res.json()
     return generatePokemon(pokeData)
@@ -30,40 +30,37 @@ function findTypeForClass(pokemon){
             return ""
         }
 }
-// add in a "Next" and "Previous" Pokémon varible to add date to the corresponding buttons
+
 const generatePokemon = (data) => {
-    const html = `
-    <div class="pokeFetch ${findTypeForClass(data)}">
-        <div class="imgcard ${findTypeForClass(data)}">
-        <img class="pokeImg"src="${data.sprites.other["official-artwork"].front_default}">
+    const imgRenderHolder = document.querySelector('.pokeImg')
+    const statsRenderHolder = document.querySelector('.pokeStats')
+    const imgRender = `
+    <div class="${findTypeForClass(data)} imgHolder">
+        <img src="${data.sprites.other["official-artwork"].front_default}">
         <div class="typeSec">
         ${data.types.map(type => `
             <span class="${type.type.name}">${type.type.name}</span>
         `)}
         </div>
-        </div>
-        <section class="details">
-        <div class="pokeName ${findTypeForClass(data)}">#${data.id}&nbsp| ${data.name[0].toUpperCase() + data.name.substring(1)}</div>
-        <div class="stats ${findTypeForClass(data)}">
-        <span>Height:${data.height/10}m &nbsp| Weight:${data.weight/10}kg</span>
-        
-    
-
-        </section>
     </div>
     `
-    const pokemonDiv = document.querySelector('.pokeContainer')
-    pokemonDiv.innerHTML = html
-    
+    const statsRender = `
+    <div class="pokeName ${findTypeForClass(data)}">#${data.id}&nbsp| ${data.name[0].toUpperCase() + data.name.substring(1)}</div>
+    <span>Height:${data.height/10}m &nbsp| Weight:${data.weight/10}kg</span>
+    `
+
+    imgRenderHolder.innerHTML = imgRender
+    statsRenderHolder.innerHTML = statsRender
 }
 
 const generateFlavorText = (data) => {
-    console.log(data.flavor_text_entries[0])
-    const flavorText = `
-        <div>${data.flavor_text_entries[0].flavor_text}</div>
-    `
 
-    const flavorTextDiv = document.querySelector('.pokeFlavor')
-    flavorTextDiv.innerHTML = flavorText
+    const flavorRender = document.querySelector('.pokeFlavorText')
+    const flavorText = `
+        <div class="pokeFlavor">${data.flavor_text_entries[0].flavor_text}</div>
+        <div class="filler"></div>
+    `
+    flavorRender.innerHTML = flavorText
+
 }
 

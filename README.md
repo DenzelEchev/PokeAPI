@@ -17,3 +17,7 @@ This repo serves as a practice ground for my APIs and other JS techniques that I
 ### Things Fixed:
 [x] Replaced GBA game sprites with the official artwork from the game's illustrators
 [x] Right now on getting single type pokemon type info works, so it needs to work if it has either 1 or 2 types
+
+### Things for later:
+[] add Sass
+[] try it out on a framework
