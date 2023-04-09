@@ -23,3 +23,4 @@ This repo serves as a practice ground for my APIs and other JS techniques that I
 [] add Sass
 [] try it out on a framework
 [x] 2.0 Major Revamp
+[] update readme
