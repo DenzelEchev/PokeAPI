@@ -1,5 +1,6 @@
 # Pokemon API project
 ## Version 2.00.00
+[![Netlify Status](https://api.netlify.com/api/v1/badges/183def16-af67-4b96-9f7c-77f1b5f2be4c/deploy-status)](https://app.netlify.com/sites/pokiapi/deploys)
 This repo serves as a practice ground for my APIs and other JS techniques that I will need in the very near future.
 
 ### Things to do:
