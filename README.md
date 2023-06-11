@@ -23,6 +23,6 @@ This repo serves as a practice ground for my APIs and other JS techniques that I
 
 ### Things for later:
 [] add Sass
-[] try it out on a framework
+[] try it out on a framework, with TypeScript
 [x] 2.0 Major Revamp
 [] update readme
