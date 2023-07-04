@@ -4,6 +4,14 @@
 <br>
 This repo serves as a practice ground for my APIs and other JS techniques that I will need in the very near future.
 
+### Work in Progress
+```
+Converting project to react using Vite.
+TypeScript and Tailwind CSS will also be added into the project
+
+progress: initial set-up
+```
+
 ### Things to do:
 [x] Clean up html and form a structure
 [x] add css and make it look more pretty(maybe have a static pokeDex image and put Data on top of it or make a dex looking object using css)
@@ -22,7 +30,7 @@ This repo serves as a practice ground for my APIs and other JS techniques that I
 [x] Right now on getting single type pokemon type info works, so it needs to work if it has either 1 or 2 types
 
 ### Things for later:
-[] add Sass
-[] try it out on a framework, with TypeScript
+[x] add Sass
+[x] try it out on a framework, with TypeScript
 [x] 2.0 Major Revamp
-[] update readme
+[x] update readme
