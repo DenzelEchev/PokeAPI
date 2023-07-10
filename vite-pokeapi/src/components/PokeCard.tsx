@@ -17,15 +17,18 @@ const PokeCard = ({pokemon}:{pokemon: string}) =>{
     
         fetchData();
       }, [pokemon]);
-
+      if(currentPokemon)
     return (
-        <div>
-            {currentPokemon && (
+        <>
             <img src={currentPokemon.sprites.other["official-artwork"].front_default} alt="" />
-            )}
             <h5>{pokemon}</h5>
-            <span>{currentPokemon?.height}</span>
-        </div>
+            <span>{currentPokemon.height/10}</span>
+            <span>{currentPokemon.weight/10}</span>
+            <ul>{currentPokemon.types.map((type) => (
+                <li key={type.type.name}>{type.type.name}</li>
+              ))}
+            </ul>
+        </>
     )
 }
 
