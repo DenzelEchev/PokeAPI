@@ -30,11 +30,12 @@ progress: initial set-up
 ### Things Fixed
 ---
 [x] Replaced GBA game sprites with the official artwork from the game's illustrators <br>
-[x] Right now on getting single type pokemon type info works, so it needs to work if it has either 1 or 2 types <br>
+[x] Right now on getting single type pokemon type info works, so it needs to work if it has either 1 or 2 types <br>dd
 
 ### Things for later
 ---
 [x] add Sass <br>
+[] add tailwind css
 [x] try it out on a framework, with TypeScript <br>
 [x] 2.0 Major Revamp <br>
 [x] update readme <br>
