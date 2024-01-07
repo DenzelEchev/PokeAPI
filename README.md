@@ -39,3 +39,4 @@ progress: initial set-up
 [x] try it out on a framework, with TypeScript <br>
 [x] 2.0 Major Revamp <br>
 [x] update readme <br>
+[] clean up the UI of the app and streamline the API calls
