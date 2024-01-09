@@ -7,7 +7,8 @@ This repo serves as a practice ground for my APIs and other JS techniques that I
 ### Work in Progress
 ```
 Converting project to react using Vite.
-TypeScript and Tailwind CSS will also be added into the project
+TypeScript and Tailwind CSS will also be added into the project.
+Clean up API calls and UI
 
 progress: initial set-up
 ```
