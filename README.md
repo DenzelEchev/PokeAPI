@@ -1,5 +1,5 @@
 # Pokemon API project
-## Version 2.00.00
+## Version 3.00.00
 [![Netlify Status](https://api.netlify.com/api/v1/badges/183def16-af67-4b96-9f7c-77f1b5f2be4c/deploy-status)](https://app.netlify.com/sites/pokiapi/deploys)
 <br>
 This repo serves as a practice ground for my APIs and other JS techniques that I will need in the very near future.
@@ -39,5 +39,6 @@ progress: initial set-up
 [] add tailwind css
 [x] try it out on a framework, with TypeScript <br>
 [x] 2.0 Major Revamp <br>
+[x] 3.0 Major Revamp <br>
 [x] update readme <br>
 [] clean up the UI of the app and streamline the API calls
